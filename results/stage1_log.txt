@@ -1,0 +1,10 @@
+16 0 early 110.2 ms | late 122.0 ms
+16 1 early 98.4 ms | late 117.5 ms
+16 2 early 96.1 ms | late 123.7 ms
+128 0 early 181.3 ms | late 208.7 ms
+128 1 early 181.1 ms | late 208.7 ms
+128 2 early 176.0 ms | late 209.2 ms
+256 0 early 276.1 ms | late 312.6 ms
+256 1 early 285.7 ms | late 298.9 ms
+256 2 early 292.0 ms | late 319.6 ms
+saved results/stage1_naive_mps_fp32.json
