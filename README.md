@@ -28,13 +28,19 @@ results/stage1_naive_mps_fp32.json
 
 ## Run
 
+```bash
 pip install -r requirements.txt
 PYTHONPATH=src python -m miniserve.hf_baseline
 PYTHONPATH=src python -m miniserve.stage1_results
-PYTHONPATH=src python -m pytest tests/test_stage1.py -s
+PYTHONPATH=src python -m pytest tests/test_stage1.py -s -v
+```
 
 ## Correctness
 
-tests/test_stage1.py compares greedy output with model.generate() on one prompt.
+tests/test_stage1.py compares greedy output with model.generate() on 5 prompts,
+40 new tokens each, on CPU in fp32 (token ids must match exactly).
+The timing results above were measured on MPS, not CPU.
+Not tested yet: sampling with temperature, top-k or top-p, long prompts,
+stopping at the end token.
 
 Next: KV cache.
